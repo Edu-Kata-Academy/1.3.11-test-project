@@ -1,0 +1,43 @@
+.currencies-switcher {
+  position: relative;
+}
+
+.switcher {
+  overflow: hidden;
+  display: flex;
+
+  &__item {
+    width: 85px;
+    height: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &.active {
+      color: #fff;
+      background-color: #16b67f;
+    }
+
+    &:first-child {
+      border-left: 1px solid #cdcdcd;
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      width: 65px;
+      background: url('../../assets/angle-arrow-down.svg') no-repeat 50%;
+      background-size: 12px;
+      color: transparent;
+      border-radius: 0 4px 4px 0;
+      }
+      &:last-child.active {
+        background-image: url('../../assets/angle-arrow-up-white.svg');
+        color: transparent;
+        background-color: #16b67f;
+      }
+    }
+  }
